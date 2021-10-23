@@ -18,8 +18,13 @@ function App() {
     const xhttp = new XMLHttpRequest()
     xhttp.onload = async() =>{
 
-      let jsonout = JSON.parse(xhttp.responseText)
-      // console.log(jsonout)
+      let jsonout = {}
+      try{
+        jsonout = JSON.parse(xhttp.responseText)
+      }
+      catch(error){
+        console.log(jsonout)
+      }
 
       setData({
         post:jsonout.post,

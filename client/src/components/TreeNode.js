@@ -25,6 +25,7 @@ const TreeNode = ({post, id, child, rerender})=>{
             }
         }
         catch(err){
+            console.log(err)
             window.alert("Cannot add new nodes, already filled. Add only two nodes per comment")
         }
     }

@@ -18,8 +18,13 @@ function Quotes(){
         const xhttp = new XMLHttpRequest()
         xhttp.onload = async() =>{
     
-          let jsonout = JSON.parse(xhttp.responseText)
-        //   console.log(jsonout)
+          let jsonout = {}
+          try{
+            jsonout = JSON.parse(xhttp.responseText)
+          }
+          catch(error){
+            console.log(jsonout)
+          }
     
           setState({
             post:jsonout.content,
