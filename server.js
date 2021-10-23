@@ -145,7 +145,7 @@ app.post('/data',(req,res)=>{
     {
         console.log('POST SUCCESS')
         postlist.push(poststatus.id)
-        res.redirect('/')
+        res.redirect('/data')
     }
     else{
         console.log('POST FAILURE')
