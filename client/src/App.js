@@ -6,7 +6,7 @@ import Quotes from './components/Quotes';
 
 function App() {
   
-  let chat = { "post": "Server not connected !", "id": 100, "child": [ { "post": "aaaaaaaa", "id": "99.41315413709289", "child": [ {}, {} ] }, { "post": "ssssss", "id": "100.04884321567545", "child": [ {}, {} ] } ] }
+  let chat = { "post": "Server not connected !", "id": 100, "child": [ { "post": "test1", "id": "99.41315413709289", "child": [ {}, {} ] }, { "post": "test2", "id": "100.04884321567545", "child": [ {}, {} ] } ] }
   const [data, setData] = useState({
     id:chat.id,
     post:chat.post,

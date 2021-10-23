@@ -165,10 +165,11 @@ app.get('/data',(req,res)=>{
 
 app.get('/debug',(req,res)=>{
     console.log('OUTPUT')
-    let list = ""
+    let list = "<ul>"
     postlist.forEach(element => {
-        list+=(element.id +" " + element.post+"<br>")
+        list+=("<li>Treenode: "+element.id +" " + element.post+"</li><br>")
     })
+    list+="</ul>"
     res.send(list)
 })
 
