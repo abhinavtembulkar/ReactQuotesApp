@@ -41,12 +41,12 @@ function App() {
   // makeReqs("GET","http://localhost:5000/")
 
   return (
-    <div className="App" onLoad={makeReqs.bind(null,"GET","https://reactquoteappscode.herokuapp.com/data")}>
+    <div className="App" onLoad={makeReqs.bind(null,"GET","http://reactquoteappscode.herokuapp.com/data")}>
       <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Quotes />
           <TreeNode post={data.post} id={data.id} key={10*Math.random()} child={data.child} rerender={setData}/>
-          <a href={'https://reactquoteappscode.herokuapp.com/debug'} style={{color:"white"}}>DEBUG?</a>
+          <a href={'http://reactquoteappscode.herokuapp.com/debug'} style={{color:"white"}}>DEBUG?</a>
       </header>
       <footer>
         <i>Quote update every 30 seconds</i>
