@@ -125,7 +125,7 @@ const PORT = process.env.PORT || 5000
 
 if(process.env.NODE_ENV=='production'){
     app.use(express.static('client/build'))
-    app.get('*',(req,res)=>{
+    app.get('/',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
 }
@@ -135,7 +135,7 @@ Root = new TreeNode(100,"Tell us your thoughts and comments on this qoute, 2 rep
 postlist.push(Root)
 
 
-app.post('/',(req,res)=>{
+app.post('/data',(req,res)=>{
     console.log(req.body.postname,req.body.id)
     let searchid = req.body.id
     let postbody = req.body.postname.filter(elem=>elem!=='')  
@@ -155,7 +155,7 @@ app.post('/',(req,res)=>{
 
 // let outjson = { "post": "Hello world", "id": 100, "child": [ { "post": "aaaaaaaa", "id": "99.41315413709289", "child": [ {}, {} ] }, { "post": "ssssss", "id": "100.04884321567545", "child": [ {}, {} ] } ] }
 
-app.get('/',(req,res)=>{
+app.get('/data',(req,res)=>{
     let outjson = {}
     jsondfs(Root,outjson)
     outjson = JSON.stringify(outjson, null, "\t");

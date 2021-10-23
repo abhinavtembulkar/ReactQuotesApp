@@ -13,9 +13,9 @@ const TreeNode = ({post, id, child, rerender})=>{
         console.log(event.target.postname.value,event.target.id.defaultValue)
 
         try{
-            const response = await axios.post('https://reactquoteappscode.herokuapp.com/',{
-            postname: [event.target.postname.value,""],
-            id: event.target.id.defaultValue
+            const response = await axios.post('https://reactquoteappscode.herokuapp.com/data',{
+                postname: [event.target.postname.value,""],
+                id: event.target.id.defaultValue
             })
         
             if(response.status === 200){

@@ -41,7 +41,7 @@ function App() {
   // makeReqs("GET","http://localhost:5000/")
 
   return (
-    <div className="App" onLoad={makeReqs.bind(null,"GET","https://reactquoteappscode.herokuapp.com/")}>
+    <div className="App" onLoad={makeReqs.bind(null,"GET","https://reactquoteappscode.herokuapp.com/data")}>
       <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Quotes />
