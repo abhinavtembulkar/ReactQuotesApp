@@ -23,7 +23,7 @@ function App() {
         jsonout = JSON.parse(xhttp.responseText)
       }
       catch(error){
-        console.log(jsonout)
+        console.log(xhttp.responseText)
       }
 
       setData({
