@@ -10,8 +10,8 @@ function Quotes(){
     })
     
     useEffect(()=>{
-        const TIME_IN_SECONDS = 30
-        setInterval(getQuote.bind(null,"GET","https://api.quotable.io/random"),TIME_IN_SECONDS*1000)
+        const TIME_IN_SECOND = 30
+        setInterval(getQuote.bind(null,"GET","https://api.quotable.io/random"),TIME_IN_SECOND*1000)
     },[])
 
     function getQuote(reqstype,url){
